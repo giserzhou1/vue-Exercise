@@ -1,16 +1,25 @@
 <template>
-    <div class="first">
-        这是第三页
-    </div>
+ <div class="demo-avatar">
+    <Avatar size="small" shape='circle' src="https://i.loli.net/2017/08/21/599a521472424.jpg" />
+</div>
+
 </template>
 <script>
 export default {
-    name:'admin'
-}
+    name:'admin',
+    data(){
+          return{
+              switchValue: true
+          }
+        },
+     methods: {
+    swiperright: function () {
+      this.$router.push({'path':'/diary'});
+    }
+    }
+  }
 </script>
 <style scoped>
- .first{
-     height: 100%;
-     background-color: red;
- }
+
+ 
 </style>

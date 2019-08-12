@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import main from '@/components/main'
 import admin from '@/components/admin'
 import diary from '@/components/diary'
-import map from '@/components/map'
+import navigation from '@/components/navigation'
 
 Vue.use(Router)
 
@@ -12,10 +12,11 @@ export default new Router({
         path: '/',
         name: 'main',
         component: main,
+        redirect: '/nav',
         children: [{
-                path: 'map',
-                name: 'map',
-                component: map
+                path: 'nav',
+                name: 'navigation',
+                component: navigation
             },
             {
                 path: 'diary',
